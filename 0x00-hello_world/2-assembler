@@ -1,13 +1,2 @@
 #!/bin/bash
-
-# get the C file name
-CFILE= "$1"
-
-# generate assembly code
-gcc -S "$CFILE"
-
-# get the file name without the extension
-OUTPUT_FILE=$(echo "$CFILE" | cut -f 1 -d '.'
-
-# save the output file with the .s extension
-mv "$OUTPUT_FILE.s" "$OUTPUT_FILE.S"
+gcc -S -o "${CFILE%.*}.s" "$CFILE"
