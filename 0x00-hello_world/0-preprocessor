@@ -1,6 +1,2 @@
 #!/bin/bash
-
-# Save the C file name in the variable CFILE
-CFILE=$1
-# Run the preprocessor
-cpp -o c $CFILE
+gcc -E <C_file_name> -o <output_file_name>
