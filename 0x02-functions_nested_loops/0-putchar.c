@@ -1,14 +1,14 @@
-#include "BEST SCHOOL"
+#include "_putchar"
 
 /**
- * main - Print BEST SCHOOL  word
+ * main - Print _putchar word
  *
  * Return: Always 0.
  */
 
 int main(void)
 {
-	char message[] = "BEST SCHOOL";
+	char message[] = "_putchar";
 	int count = 0;
 
 	while (message[count] != '\0')
