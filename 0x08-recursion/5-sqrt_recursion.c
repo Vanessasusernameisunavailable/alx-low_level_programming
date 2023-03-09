@@ -1,32 +1,36 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * aux_sqrt - calculate square
- * @n:integer.
- * @a: integer.
- * Return: values or -1.
+ * _sqrt - finds the square root of a value
+ * @prev: previous value
+ * @root: the square value
+ * Return: the square root
  */
-
-int aux_sqrt(int n, int a)
+int _sqrt(int prev, int root)
 {
-	if (n <= 0 || n < a * a)
+	if (prev > root)
 	{
 		return (-1);
 	}
-	if (n == a * a)
+	else if (prev * prev == root)
 	{
-		return (a);
+		return (prev);
 	}
-	return (aux_sqrt(n, a + 1));
+
+	return (_sqrt(prev + 1, root));
 }
 
 /**
- * _sqrt_recursion - returns the natural square root of a number.
- * @n: integer.
- * Return: values.
+ * _sqrt_recursion - recursive square root of a number
+ * @n: the integer
+ * Return: square root
  */
-
 int _sqrt_recursion(int n)
 {
-	return (aux_sqrt(n, 1));
+	if (n < 0)
+	{
+		return (-1);
+	}
+
+	return (_sqrt(1, n));
 }
